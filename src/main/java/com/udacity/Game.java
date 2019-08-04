@@ -136,7 +136,7 @@ public class Game {
                 turn = 'x';
             }
         }
-        return;
+        //return;
     }
 
 
@@ -153,26 +153,24 @@ public class Game {
 
         // check if X wins
 
-        if( grid[0][0] == 'x' && grid[1][0] == 'x' && grid[2][0] == 'x') result = "X wins";
-        if( grid[0][1] == 'x' && grid[1][1] == 'x' && grid[2][1] == 'x') result = "X wins";
-        if( grid[0][2] == 'x' && grid[1][2] == 'x' && grid[2][2] == 'x') result = "X wins";
-
-        if( grid[0][0] == 'x' && grid[0][1] == 'x' && grid[0][2] == 'x') result = "X wins";
-        if( grid[1][0] == 'x' && grid[1][1] == 'x' && grid[1][2] == 'x') result = "X wins";
-        if( grid[2][0] == 'x' && grid[2][1] == 'x' && grid[2][2] == 'x') result = "X wins";
-
+        for (int i = 0; i<grid.length; i++){
+            if( grid[i][0] == 'x' && grid[i][1] == 'x' && grid[i][2] == 'x') result = "X wins";
+        }
+        for (int i = 0; i<grid.length; i++){
+            if( grid[0][i] == 'x' && grid[1][i] == 'x' && grid[2][i] == 'x') result = "X wins";
+        }
+//
         if( grid[0][0] == 'x' && grid[1][1] == 'x' && grid[2][2] == 'x') result = "X wins";
         if( grid[0][2] == 'x' && grid[1][1] == 'x' && grid[2][0] == 'x') result = "X wins";
 
         //check if O wins
 
-        if( grid[0][0] == 'o' && grid[1][0] == 'o' && grid[2][0] == 'o') result = "O wins";
-        if( grid[0][1] == 'o' && grid[1][1] == 'o' && grid[2][1] == 'o') result = "O wins";
-        if( grid[0][2] == 'o' && grid[1][2] == 'o' && grid[2][2] == 'o') result = "O wins";
-
-        if( grid[0][0] == 'o' && grid[0][1] == 'o' && grid[0][2] == 'o') result = "O wins";
-        if( grid[1][0] == 'o' && grid[1][1] == 'o' && grid[1][2] == 'o') result = "O wins";
-        if( grid[2][0] == 'o' && grid[2][1] == 'o' && grid[2][2] == 'o') result = "O wins";
+        for (int i = 0; i<grid.length; i++){
+            if( grid[i][0] == 'o' && grid[i][1] == 'o' && grid[i][2] == 'o') result = "O wins";
+        }
+        for (int i = 0; i<grid.length; i++) {
+            if (grid[0][i] == 'o' && grid[1][i] == 'o' && grid[2][i] == 'o') result = "O wins";
+        }
 
         if( grid[0][0] == 'o' && grid[1][1] == 'o' && grid[2][2] == 'o') result = "O wins";
         if( grid[0][2] == 'o' && grid[1][1] == 'o' && grid[2][0] == 'o') result = "O wins";

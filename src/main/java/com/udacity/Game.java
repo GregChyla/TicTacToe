@@ -178,19 +178,39 @@ public class Game {
         if( grid[0][2] == 'o' && grid[1][1] == 'o' && grid[2][0] == 'o') result = "O wins";
 
         //check if tie
+
+        if(
+                ( grid[0][0] == 'o' && grid[1][0] == 'x' && grid[2][0] == 'x') &&
+                ( grid[0][1] == 'x' && grid[1][1] == 'o' && grid[2][1] == 'o') &&
+                ( grid[0][2] == 'o' && grid[1][2] == 'x' && grid[2][2] == 'x')) result = "Tie";
+
+        if(
+                ( grid[0][0] == 'o' && grid[1][0] == 'x' && grid[2][0] == 'x') &&
+                ( grid[0][1] == 'x' && grid[1][1] == 'x' && grid[2][1] == 'o') &&
+                ( grid[0][2] == 'o' && grid[1][2] == 'o' && grid[2][2] == 'x')) result = "Tie";
+
         if(
                 ( grid[0][0] == 'o' && grid[1][0] == 'x' && grid[2][0] == 'o') &&
                 ( grid[0][1] == 'o' && grid[1][1] == 'x' && grid[2][1] == 'o') &&
                 ( grid[0][2] == 'x' && grid[1][2] == 'o' && grid[2][2] == 'x')) result = "Tie";
 
         if(
-                ( grid[0][0] == 'o' && grid[1][0] == 'x' && grid[2][0] == 'x') &&
-                ( grid[0][1] == 'x' && grid[1][1] == 'x' && grid[2][1] == 'o') &&
-                ( grid[0][2] == 'o' && grid[1][2] == 'o' && grid[2][2] == 'x')) result = "Tie";
+                ( grid[0][0] == 'x' && grid[1][0] == 'x' && grid[2][0] == 'o') &&
+                ( grid[0][1] == 'o' && grid[1][1] == 'o' && grid[2][1] == 'x') &&
+                ( grid[0][2] == 'x' && grid[1][2] == 'x' && grid[2][2] == 'o')) result = "Tie";
+
         if(
-                ( grid[0][0] == 'o' && grid[1][0] == 'x' && grid[2][0] == 'x') &&
-                ( grid[0][1] == 'x' && grid[1][1] == 'o' && grid[2][1] == 'o') &&
+                ( grid[0][0] == 'x' && grid[1][0] == 'o' && grid[2][0] == 'x') &&
+                ( grid[0][1] == 'o' && grid[1][1] == 'x' && grid[2][1] == 'o') &&
+                ( grid[0][2] == 'o' && grid[1][2] == 'x' && grid[2][2] == 'o')) result = "Tie";
+
+        if(
+                ( grid[0][0] == 'o' && grid[1][0] == 'o' && grid[2][0] == 'x') &&
+                ( grid[0][1] == 'x' && grid[1][1] == 'x' && grid[2][1] == 'o') &&
                 ( grid[0][2] == 'o' && grid[1][2] == 'x' && grid[2][2] == 'x')) result = "Tie";
+
+
+
 
         //Student code goes here ...
         return result;
